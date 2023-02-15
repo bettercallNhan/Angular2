@@ -1,0 +1,29 @@
+<mat-card class="dog-card" >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title id="nameacc">Admin</mat-card-title>
+  </mat-card-header>
+  <img  mat-card-image src="{{item.Image}}" >
+  <mat-card-content id="des">
+    <br>
+    <P>
+      Name: {{item.name}}
+    </P>
+    <p>
+      Price: {{item.price}}
+    </p>
+    <p>
+      Studio: {{item.studio}}
+    </p>
+    <p *ngIf="item.OutOfOrder==false">
+      Status: Available
+    </p>
+    <p *ngIf="item.OutOfOrder==true">
+      Status: Not Available
+    </p>
+  </mat-card-content>
+  <mat-card-actions id="addbtn_contain">
+    <button mat-button id="addButton" *ngIf="item.OutOfOrder == false"  (click)="addFilm(item)">Buy this product</button>
+    <!-- <p id="cantBuy" *ngIf="item.OutOfOrder == true">Not Available</p> -->
+  </mat-card-actions>
+</mat-card>

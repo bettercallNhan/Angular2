@@ -1,0 +1,20 @@
+<mat-toolbar color = "primary">
+  <button [routerLink]="['home']" mat-icon-button class="menuicon" aria-label="Example icon-button with menu icon">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>Thu Vien Phim</span>
+  <form class="search-form">
+    <mat-form-field class="search-full-width">
+      <mat-label>Tim kiem</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </form>
+  <span class="spacer1"></span>
+  <div class="dndk-button-row">
+    <button mat-button id="dndkbutton">Dang Nhap</button>
+    <button mat-button id="dndkbutton">Dang Ky</button>
+  </div>
+  <button [routerLink]="['cart']" mat-icon-button class="home-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon >add_shopping_cart</mat-icon>
+  </button>
+</mat-toolbar>

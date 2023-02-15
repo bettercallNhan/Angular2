@@ -1,0 +1,11 @@
+<div id="content">
+  <h1>GIO HANG </h1>
+  <div id = "item_container">
+  <div id="container" *ngFor="let c of cart">
+    <app-items-card2 [item_cart]= "c.film" (addFilmCallBack)="addFilm($event)"></app-items-card2>
+    <!-- <div id="SoLuong" >So Luong : {{c.quantity}}</div> -->
+  </div>
+  </div>
+</div>
+
+

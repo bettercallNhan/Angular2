@@ -1,0 +1,30 @@
+
+<mat-card class="dog-card" >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title id="nameacc">Admin</mat-card-title>
+  </mat-card-header>
+  <img  mat-card-image src="{{item_cart.Image}}" >
+  <mat-card-content id="des">
+    <br>
+    <P>
+      Name: {{item_cart.name}}
+    </P>
+    <p>
+      Price: {{item_cart.price}}
+    </p>
+    <p>
+      Studio: {{item_cart.studio}}
+    </p>
+    <p *ngIf="item_cart.OutOfOrder==false">
+      Status: Available
+    </p>
+    <p *ngIf="item_cart.OutOfOrder==true">
+      Status: Not Available
+    </p>
+  </mat-card-content>
+  <mat-card-actions id="addbtn_contain">
+    <!-- <button id="addButton">+</button>
+    <button id="addButton">-</button> -->
+  </mat-card-actions>
+</mat-card>
